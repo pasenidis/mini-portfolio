@@ -1,0 +1,280 @@
+/** * index.scss * - Add any styles you want here! */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #040404e0;
+    }
+    .card2 {
+        opacity: .75;
+    }
+}
+
+body main {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 992px) {
+    body main {
+        display: block;
+    }
+}
+
+body main section {
+    margin: 15px;
+}
+
+@media only screen and (max-width: 992px) {
+    body main section {
+        margin: 15px auto;
+    }
+}
+
+body main section.cards {
+    position: relative;
+    overflow: hidden;
+    width: 400px;
+    height: 250px;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+body main section.cards header {
+    color: #fff;
+}
+
+body main section.cards header h4 {
+    font-size: 32px;
+    line-height: 22px;
+    font-weight: 700;
+    font-family: "Playfair Display", serif;
+}
+
+body main section.cards header .portfolio-link {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1;
+}
+
+body main section.cards header .portfolio-link:before {
+    content: "";
+    width: 3px;
+    height: 22px;
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: -20px;
+    left: 6px;
+    border-radius: 20px;
+}
+
+body main section.cards header .portfolio-link i {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 25px;
+}
+
+body main section.cards header .portfolio-link i:hover {
+    color: #fff;
+}
+
+body main section.cards .description {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+body main section.cards .description p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 22px;
+    line-height: 35px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+body main section.cards footer.designation {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+body main section.cards footer.designation h2 {
+    font-size: 12px;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+}
+
+body main section.cards footer.designation .social ul {
+    padding: 0;
+    list-style: none;
+}
+
+body main section.cards footer.designation .social ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+body main section.cards footer.designation .social ul li i {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+}
+
+body main section.cards footer.designation .social ul li i:hover {
+    color: #fff;
+}
+
+body main section.cards.card1 {
+    background: #fc6a57;
+}
+
+body main section.cards.card1 .intraction .one {
+    width: 100%;
+    height: 40%;
+    background: #fe524e;
+    position: absolute;
+    bottom: -12%;
+    right: 0;
+    left: -5%;
+    transform: rotate(10deg);
+}
+
+body main section.cards.card1 .intraction .two {
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(251, 166, 80, 1) 0%, rgba(251, 151, 81, 1) 26%, rgba(252, 119, 83, 1) 82%, rgba(252, 112, 84, 1) 95%);
+    position: absolute;
+    top: 0;
+    right: -15%;
+    transform: skew(-19deg);
+}
+
+body main section.cards.card2 {
+    background: #6f01e3;
+}
+
+body main section.cards.card2 footer.designation {
+    z-index: 2;
+}
+
+body main section.cards.card2 .intraction .one {
+    width: 100px;
+    height: 100px;
+    background: #9028fc;
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    border-radius: 100%;
+    z-index: 2;
+    animation: bubble 4s linear alternate infinite;
+}
+
+body main section.cards.card2 .intraction .two {
+    width: 200px;
+    height: 200px;
+    background: #8209ff;
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    border-radius: 100%;
+    z-index: 1;
+    animation: bubble 4s 1s linear alternate infinite;
+}
+
+body main section.cards.card2 .intraction .three {
+    width: 300px;
+    height: 300px;
+    background: #7701f4;
+    position: absolute;
+    bottom: -150px;
+    left: -150px;
+    border-radius: 100%;
+    animation: bubble 4s 2s linear alternate infinite;
+}
+
+body main section.cards.card2 .intraction .four {
+    width: 15px;
+    height: 15px;
+    border: 4px solid #ff36eb;
+    position: absolute;
+    top: 25%;
+    right: 30%;
+    border-radius: 50%;
+    animation: circle 10s linear alternate infinite;
+}
+
+body main section.cards.card2 .intraction .five {
+    width: 8px;
+    height: 8px;
+    border: 6px solid #e5c36b;
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    border-radius: 50%;
+    animation: circle 10s 1s linear alternate infinite;
+}
+
+body main section.cards.card2 .intraction .six {
+    width: 6px;
+    height: 6px;
+    border: 4px solid #2db2ff;
+    position: absolute;
+    top: 25%;
+    right: 10%;
+    border-radius: 50%;
+    animation: circle 10s 2s linear alternate infinite;
+}
+
+@keyframes bubble {
+    0% {
+        transform: translate(0);
+    }
+    50% {
+        transform: translate(10px);
+    }
+    100% {
+        transform: translate(5px);
+    }
+}
+
+@keyframes circle {
+    0% {
+        transform: translate(0);
+    }
+    50% {
+        transform: translate(5px);
+    }
+    75% {
+        transform: translate(10px);
+    }
+    100% {
+        transform: translate(5px);
+    }
+}
+
+.designation a:link,
+.designation a:visited,
+.designation a:hover,
+.designation a:active {
+    color: white;
+    text-decoration: none;
+}
