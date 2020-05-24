@@ -15,6 +15,12 @@ body {
     background: #f5f5f5;
 }
 
+body main {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+}
+
 @media (prefers-color-scheme: dark) {
     body {
         background: #040404e0;
@@ -22,12 +28,14 @@ body {
     .card2 {
         opacity: .75;
     }
-}
-
-body main {
-    margin: 50px;
-    display: flex;
-    justify-content: center;
+    .bio {
+        color: whitesmoke;
+    }
+    .fa-inbox,
+    .fa-discord,
+    .fa-globe {
+        color: yellow;
+    }
 }
 
 @media only screen and (max-width: 992px) {
@@ -271,10 +279,113 @@ body main section.cards.card2 .intraction .six {
     }
 }
 
+@keyframes rear-appearance {
+    from {
+        opacity: 0;
+    }
+    top {
+        opacity: 1;
+    }
+}
+
+.bio {
+    display: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 3.5rem;
+}
+
+.activated {
+    animation: rear-appearance 3s;
+    opacity: 1;
+}
+
+.swap {
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.reverse-anchor {
+    margin: 0;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
+
+.swap a:visited,
+.swap a:hover,
+.swap a:link,
+.swap a:active {
+    color: blueviolet;
+    text-decoration: none;
+}
+
+.contact-box ul {
+    text-align: center;
+    list-style-type: none;
+    font-size: 2.4rem;
+}
+
+@keyframes uno {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+li:nth-child(1) {
+    animation-name: uno;
+    animation-duration: 2s;
+    opacity: 1;
+}
+
+li:nth-child(2) {
+    animation-name: uno;
+    animation-duration: 4s;
+    opacity: 1;
+}
+
+li:nth-child(3) {
+    animation-name: uno;
+    animation-duration: 6s;
+    opacity: 1;
+}
+
+li:nth-child(4) {
+    animation-name: uno;
+    animation-duration: 8s;
+    opacity: 1;
+}
+
+@keyframes swap-rotation {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.toggler {
+    animation: swap-rotation ease-in-out 2s;
+    opacity: 0;
+}
+
 .designation a:link,
 .designation a:visited,
 .designation a:hover,
 .designation a:active {
     color: white;
     text-decoration: none;
+}
+
+.fa-inbox,
+.fa-discord,
+.fa-globe {
+    color: purple;
 }

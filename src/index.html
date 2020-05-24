@@ -4,22 +4,23 @@
 
     <!--  Meta  -->
     <meta charset="UTF-8">
-    <meta name="description" content="Personal website of Edward Pasenidis, a data scientist settled in Thessaloniki, Greece">
-    <meta name="keywords" content="programming, personal, website, portfolio, card, edward, pasenidis, data, scientist">
+    <meta name="description" content="Personal website of Edward Pasenidis, a junior computer scientist settled in Thessaloniki, Greece">
+    <meta name="keywords" content="programming, personal, website, portfolio, card, edward, pasenidis, junior, data, scientist">
     <meta name="author" content="Edward Pasenidis">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edward Pasenidis</title>
 
     <!--  Styles  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Playfair+Display:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
     <main>
-        <section class="cards card2">
+        <section class="cards card2" id="front">
             <header>
                 <h4>Edward Pasenidis</h4>
                 <a class="portfolio-link" href="https://pasenidis.github.io" target="_blank">
@@ -27,7 +28,7 @@
                 </a>
             </header>
             <div class="description">
-                <p><strong>Junior Data Scientist</strong>, settled in Thessaloniki, Greece</p>
+                <p><strong>Junior Computer Scientist</strong>, settled in Thessaloniki, Greece</p>
             </div>
             <div class="intraction">
                 <div class="one"></div>
@@ -44,24 +45,47 @@
                     <ul>
                         <li>
                             <a href="https://github.com/pasenidis" target="_blank">
-                                <i class="fa fa-github"></i>
+                                <i class="fab fa-github"></i>
                             </a>
                         </li>
                         <li>
                             <a href="javascript:alert('I don\'t have LinkedIn yet.')">
-                                <i class="fa fa-linkedin"></i>
+                                <i class="fab fa-linkedin"></i>
                             </a>
                         </li>
                         <li>
                             <a href="https://twitter.com/EdwardPasenidis" target="_blank">
-                                <i class="fa fa-twitter"></i>
+                                <i class="fab fa-twitter"></i>
                             </a>
                         </li>
                     </ul>
                 </div>
             </footer>
         </section>
+        <section class="bio" id="back">
+            <header>
+                <h1 align="center">Info</h1>
+                <div class="contact-box">
+                    <ul class="contacts">
+                        <!-- <li class="contact">+306940404040</li> -->
+                        <li class="contact">
+                            <a href="#"><i class="fa fa-inbox"></i></a> me@edpasenidis.tech</li>
+                        <li class="contact">
+                            <a href="https://discord.gg/R5EME9a"><i class="fab fa-discord"></i></a> discord.gg/R5EME9a
+                        </li>
+                        <li class="contact">
+                            <a href="https://pasenidis.github.io"><i class="fa fa-globe"></i></a> pasenidis.github.io</li>
+                    </ul>
+                </div>
+            </header>
+        </section>
     </main>
+    <div class="swap">
+        <a href="javascript:swapCards(2000)" class="reverse-anchor">
+            <i id="spinner" class="fas fa-sync-alt"></i>
+        </a>
+    </div>
+    <script defer src="js/main.js"></script>
 </body>
 
 </html>
